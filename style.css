@@ -1,0 +1,386 @@
+:root {
+  /* fonts  */
+  --font-open: 'Open Sans', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+
+  /* colors  */
+  --clr-pink: hsl(322, 100%, 66%);
+  --clr-neutral-100: hsl(193, 100%, 96%);
+  --clr-neutral-900: hsl(192, 100%, 9%);
+  --clr-grayish: hsl(208,11%,55%);
+}
+
+/* 1. Use a more-intuitive box-sizing model.*/
+ *, *::before, *::after { 
+ box-sizing: border-box;
+ } 
+ /*
+ 2. Remove default margin
+ */
+ * {
+ margin: 0;
+ }
+ /*
+ Typographic tweaks!
+ 3. Add accessible line-height
+ 4. Improve text rendering 
+ */
+ body {
+ line-height: 1.5;
+ -webkit-font-smoothing: antialiased;
+}
+ /*
+ 5. Improve media defaults
+ */
+ img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+height: auto;
+}
+ /*
+ 6. Remove built-in form typography styles
+*/
+ input, button, textarea, select {
+font: inherit;
+}
+ /*
+ 7. Avoid text overflows
+ */
+ p, h1, h2, h3, h4, h5, h6 {
+ overflow-wrap: break-word;
+ }
+
+ /* styling */
+body {
+  font-family: var(--font-open);
+  background-color: var(--clr-neutral-100);
+}
+h1 , h2, h3 {
+  font-family: var(--font-poppins);
+}
+@media (max-width: 999px)
+{
+  .header h1 {
+    font-size: 1.75rem;
+    /* text-align: center; */
+   }
+  .header .logo {
+    max-width: 115px;
+  }
+  .header p,.header h1, main p{
+    text-align: center;
+  }
+  .grow_together h2, .flowing_conversations h2, .your_users h2 {
+    text-align: center;
+  }
+  .header_button_div {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 3.5rem;
+   }
+   .grow_together, .flowing_conversations, .your_users{
+    margin: 0 1rem;
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.15);
+    border-radius: 1rem;
+    padding: 3.5rem 2rem;
+    display: grid;
+    justify-items: center;
+   }
+   main {
+    padding-top: 4rem;
+   }
+   .community {
+    margin: 3rem 0.7rem 0 0.7rem;
+    margin-bottom: -18%;
+   }
+   footer {
+    padding-top: 8rem;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+   }
+   .socials {
+    margin-top: 3rem;
+   }
+}
+@media (min-width: 1000px)
+{
+  .header {
+    margin: auto;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    background-image: url(images/bg-hero-desktop.svg);
+    background-repeat: no-repeat;
+  }
+  .header_top{
+    padding: 0.5rem 2rem;
+    height: 50px;
+  }
+  .header .logo {
+    max-width: 150px;
+  }
+  .header_intro {
+    display: flex;
+    padding: 0 2rem;
+    align-items: center;
+    gap: 4rem;
+  }
+  .header p,.header h1, main p{
+    text-align: left;
+  }
+  .grow_together h2, .flowing_conversations h2, .your_users h2 {
+    text-align: left;
+  }
+  .hero_bg {
+    max-width: 617px;
+    padding-right: 1.5rem;
+  }
+  .header h1 {
+    padding-left: 1.5rem;
+    font-size: 2rem;
+    text-wrap: balance;
+  }
+  .header p {
+    text-align: left;
+  }
+  .header_button_div {
+    display: grid;
+    justify-content: start;
+    margin-bottom: 3.5rem;
+    padding-left: 1.5rem;
+  }
+  .grow_together, .flowing_conversations, .your_users{
+    padding: 3.5rem 2rem 3.5rem 6rem;    
+    max-width: 950px;
+    display: flex;
+    gap: 5rem;
+  }
+  main {
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+  }
+  main img {
+    max-width: 300px;
+  }
+  .grow_together, .your_users{
+    flex-direction: row-reverse;
+  }
+  .community{
+    margin: 6rem 0.7rem 0 0.7rem;
+    margin-bottom: -20%;
+  }
+  .footer_logo{
+    max-width: 180px;
+  }
+  footer {
+    padding: 8rem 7rem 4rem 7rem;
+
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+ 
+  }
+  .copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .location_p{
+    max-width: 335px;
+  }
+}
+
+ header {
+  background-image: url(images/bg-hero-mobile.svg);
+  background-repeat: no-repeat;
+  
+ }
+
+ .header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.75rem 0.75rem 4rem;
+ }
+ .header .logo {
+  /* width: 30%; */
+  height: auto;
+  align-items: center;
+ }
+
+ .header_top_button {
+  background-color: #fff;
+  border: none;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  padding: 0.3rem 1.5rem;
+  font-family: var(--font-poppins);
+  box-shadow: 0 5px 2px hsla(0,0%,0%,0.025);
+ }
+
+
+ .header p {
+  /* text-align: center; */
+  padding: 1rem 1.5rem 2rem 1.5rem;
+ }
+
+ .header_button {
+  background-color: var(--clr-pink);
+  border: none;
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 0.75rem 4rem;
+  border-radius: 2rem;
+  max-width: 275px;
+  box-shadow: 0 5px 2px hsla(0,0%,0%,0.025);
+ }
+ 
+
+
+ .hero_bg {
+  width: 86%;
+  margin: auto;
+  margin-bottom: 2rem;
+ }
+
+ main {
+  background-color: #fff;
+  /* padding-bottom: 3rem; */
+ }
+
+ .grow_together, .flowing_conversations, .your_users{
+  margin: 0 1rem;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.15);
+  border-radius: 1rem;
+  /* padding: 3.5rem 2rem; */
+  /* display: grid;
+  justify-items: center; */
+ }
+ main {
+  display: grid;
+  gap: 2.5rem;
+  z-index: 1;
+ }
+
+ main img {
+  width: 85%;
+ }
+
+ .grow_together h2, .flowing_conversations h2, .your_users h2 {
+  /* text-align: center; */
+  margin-block: 3.5rem 1rem;
+ }
+
+ main p {
+  /* text-align: center; */
+  color: hsla(0, 0%, 0%, 0.5);
+ }
+
+ .community {
+   /* margin: 3rem 0.7rem 0 0.7rem; */
+   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.15);
+   border-radius: 1rem;
+   padding: 2.5rem 0;
+   display: grid;
+   justify-items: center;
+   z-index: 3;
+  background-color: #fff;
+ }
+
+ .community h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.community button {
+  background-color: var(--clr-pink);
+  border: none;
+  color: #fff;
+  padding: 1rem 3.5rem;
+  font-size: 0.8rem;
+  border-radius: 2rem;
+}
+
+footer {
+  z-index: 2;
+  background-color: var(--clr-neutral-900);
+  color: #fff;
+}
+
+.footer_logo {
+width: 50%;
+padding-bottom: 2rem;
+}
+
+.address, .phone, .email
+{
+  padding-bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.address img, .phone img, .email img {
+  max-height: 18px;
+  margin-top: 6px;
+}
+.email_logo {
+  max-height: 16px;
+}
+
+.footer a:any-link{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.facebook, .twitter, .instagram {
+  filter: invert(98%) sepia(3%) saturate(83%) hue-rotate(202deg) brightness(116%) contrast(100%);
+}
+
+.socials {
+  /* margin-top: 3rem; */
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.socials img {
+  width: 100%;
+}
+
+.copyright {
+  font-size: 11px;
+  text-align: center;
+}
+
+.header_top {
+  align-items: center;
+}
+
+.socials svg:active {
+  fill: var(--clr-pink);
+}
+
+.links1 a:active{
+  text-decoration: underline;
+}
+.links2 a:active{
+  text-decoration: underline;
+}
+
+.header_button:active, .community_button:active {
+  background-color: hsla(322, 100%, 66%,0.5);
+}
+
+button {
+  cursor: pointer;
+}
+
+.header_top_button:active{
+  background-color: hsla(100,100%,100%,0.7);
+  color: hsla(0,0%,0%,0.5);
+}
